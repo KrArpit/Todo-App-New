@@ -1,0 +1,167 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+body{
+    background: #1d3557;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container{
+    width: 38%;
+    margin: 10em auto 0;
+}
+.inputSection{
+    background-color: #f1faee;
+    padding: 1.5em 1em;
+    border-radius: 0.4em;
+    display: flex;
+    width: 100%;
+    margin-bottom: 1em;
+}
+.inputSection .input{
+    /* width: 22em; */
+    width: 100%;
+    flex: 1;
+    padding: 0.5em 0.4em;
+    margin-right: 1em;
+    outline: none;
+    font-size: 1em;
+    font-weight: 400;
+    background: transparent;
+    border: 1px solid #b2b5ce;
+    border-radius: 0.3em;
+}
+.inputSection .input::placeholder{
+    text-align: center;
+}
+.inputSection .addButton{
+    padding: 0.5em 0.7em;
+    font-size: 1em;
+    background-color: #ffd166;
+    color: #073b4c;
+    border: 1px solid #073b4c;
+    border-radius: 0.3em;
+    cursor: pointer;
+}
+.taskDisplaySection{
+    background-color: #f1faee;
+    width: 100%;
+    padding: 1em 1.7em;
+    border-radius: 0.4em;
+}
+.statusSection{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 1em;
+    border-bottom: 1px solid #b2b5ce;
+}
+.control span{
+    margin-right: 0.4em;
+    padding-bottom: 0.1em;
+    font-size: 1em;
+    cursor: pointer;
+}
+.control .active{
+    border-bottom: 0.2em solid #1d3557;
+    border-radius: 0.1em;
+}
+.clearAll{
+    padding: 0.3em 0.5em;
+    font-size: 1em;
+    /* background-color: #ffd166; */
+    background-color: #f07167;
+    color: #073b4c;
+    border: 1px solid #073b4c;
+    border-radius: 0.3em;
+    cursor: pointer;
+}
+.taskSection .message{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 1em auto 0.1em;
+    font-size: 1.1em;
+    font-weight: 500;
+    color: #5f6082;
+}
+.taskList{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* flex-wrap: wrap; */
+    font-size: 1.1em;
+    padding: 0.6em 0 0.6em 0;
+    border-bottom: 1px solid #b2b5ce;
+}
+.taskList label{
+    display: flex;
+    align-items: center;
+}
+.taskList label p.checked{
+    text-decoration: line-through;
+    color: #5f6082;
+}
+.checkbox-round {
+    width: 1.5em;
+    height: 1.5em;
+    background-color: white;
+    border-radius: 50%;
+    vertical-align: middle;
+    border: 2px solid #ddd;
+    appearance: none;
+    outline: none;
+    cursor: pointer;
+    margin-right: 0.5em;
+}
+.checkbox-round:checked {
+    background-color: gray;
+}
+.taskList .list{
+    flex: 1;
+    overflow: scroll;
+}
+.taskList .icons{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 0.6em;
+}
+.icons .fa-pen-to-square{
+    padding: 0.4em;
+    background: #06d6a0;
+    border-radius: 0.2em;
+    margin-right: 0.6em;
+    cursor: pointer;
+}
+.icons .fa-square-minus{
+    padding: 0.4em;
+    background: #e0525e;
+    border-radius: 0.2em;
+    cursor: pointer;
+}
+@media screen and (min-width: 768px) and (max-width: 1023px){
+    .container{
+        width: 50%;
+    }
+}
+@media screen and (max-width: 767px){
+    .container{
+        width: 90%;
+    }
+    .inputSection{
+        flex-direction: column;
+        gap: 0.6em;
+    }
+    .statusSection{
+        flex-direction: column;
+        gap: 1em;
+    }
+    .clearAll{
+        width: 10em;
+    }
+}
